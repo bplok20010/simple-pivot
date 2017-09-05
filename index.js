@@ -8,6 +8,8 @@
 var utils = require('./utils');
 
 /**
+ * 数据透视
+ * @author nobo.zhou<nobo.zhou@foxmail.com>
  * @class
  * @param {Object} data - 需要透视数据
  * @param {Array} data.columns - 数据的列
