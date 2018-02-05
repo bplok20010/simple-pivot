@@ -3,6 +3,40 @@
 
 > 不进行数据的汇总计算
 
+## 安装
+
+```
+npm install --save simplepivot
+```
+
+## 使用
+
+```
+
+const simplePivot = require('simplepivot');
+
+const dataset = {
+	columns: ['性别', '人数'],
+	list: [
+		{"性别": "男", "人数": 1584},
+		{"性别": "女", "人数": 1514},
+	]	
+};
+
+
+const pivotData = simplePivot( dataset, {
+	columns: ['性别'],
+	values: ['人数']	
+} );
+
+console.log( pivotData );
+
+
+```
+
+## 其他
+
+
 ```
 /**
  * 数据透视效果

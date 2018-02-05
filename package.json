@@ -1,6 +1,6 @@
 {
-  "name": "simplePivot",
-  "version": "1.0.0",
+  "name": "simplepivot",
+  "version": "1.0.2",
   "description": "数据透视(原横向倒置)",
   "main": "lib/simplePivot.js",
   "directories": {
