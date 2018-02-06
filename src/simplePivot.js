@@ -81,7 +81,3 @@ function simplePivot(data = {}, options = {}) {
 }
 
 module.exports = simplePivot;
-
-//export default simplePivot;
-//use in umd
-//export {simplePivot};
