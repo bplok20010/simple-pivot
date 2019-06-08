@@ -31,8 +31,8 @@ const dataset1 = {
 console.log('====================')
 
 const pivotData1 = simplePivot(dataset1, {
-    columns: ['类型', 'ABC'],
-    values: ['数值', 'ccc']
+    columns: ['类型'],
+    values: ['数值']
 });
 
 console.log(pivotData1);
