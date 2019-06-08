@@ -1,52 +1,40 @@
 {
-  "name": "simplepivot",
-  "version": "1.0.2",
-  "description": "数据透视(原横向倒置)",
-  "main": "lib/simplePivot.js",
-  "directories": {
-    "test": "tests"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rimraf lib/* es/* dist/*",
-    "build:cjs": "babel src -d lib",
-    "build:es": "babel --no-babelrc src -d es",
-    "umd": "rollup -c",
-	"eslint": "eslint src",
-    "build": "npm-run-all eslint clean build:cjs umd "
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bplok20010/simplePivot.git"
-  },
-  "author": "nobo.zhou<nobo.zhou@foxmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bplok20010/simplePivot/issues"
-  },
-  "files": [
-    "*.md",
-    "lib"
-  ],
-  "homepage": "https://github.com/bplok20010/simplePivot#readme",
-  "dependencies": {
-    "babel": "^6.23.0",
-    "babel-loader": "^7.1.2",
-    "eslint": "^4.17.0",
-    "nex-utils": "^0.3.0",
-    "npm-run-all": "^4.1.2",
-    "rimraf": "^2.6.2",
-    "rollup": "^0.54.0",
-    "rollup-plugin-babel": "^3.0.3",
-    "rollup-plugin-commonjs": "^8.2.6",
-    "rollup-plugin-json": "^2.3.0",
-    "rollup-plugin-node-resolve": "^3.0.2",
-    "rollup-plugin-replace": "^2.0.0",
-    "warning": "^3.0.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-env": "^1.6.1"
-  }
+    "name": "simplepivot",
+    "version": "2.0.0",
+    "description": "数据透视(原横向倒置)",
+    "main": "index.js",
+    "directories": {
+        "test": "tests"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "transform-es src -d lib -c -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bplok20010/simplePivot.git"
+    },
+    "author": "nobo.zhou<nobo.zhou@foxmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/bplok20010/simplePivot/issues"
+    },
+    "files": [
+        "*.md",
+        "lib"
+    ],
+    "homepage": "https://github.com/bplok20010/simplePivot#readme",
+    "dependencies": {
+        "@babel/runtime": "^7.4.5",
+        "@babel/runtime-corejs2": "^7.4.5",
+        "lodash": "^4.17.11",
+        "warning": "^3.0.0"
+    },
+    "devDependencies": {
+        "@babel/plugin-transform-modules-amd": "^7.2.0",
+        "@babel/plugin-transform-modules-commonjs": "^7.4.4",
+        "@babel/plugin-transform-modules-systemjs": "^7.4.4",
+        "@babel/plugin-transform-modules-umd": "^7.2.0",
+        "transform-es": "^2.3.0"
+    }
 }
