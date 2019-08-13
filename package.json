@@ -1,6 +1,6 @@
 {
     "name": "simplepivot",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "数据透视(原横向倒置)",
     "main": "index.js",
     "directories": {
@@ -20,6 +20,7 @@
         "url": "https://github.com/bplok20010/simplePivot/issues"
     },
     "files": [
+        "*.js",
         "*.md",
         "lib"
     ],
