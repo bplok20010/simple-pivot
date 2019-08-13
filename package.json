@@ -8,7 +8,7 @@
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "transform-es src -d lib -c -w"
+        "start": "transform-es src -d lib -c -w --corejs false"
     },
     "repository": {
         "type": "git",
