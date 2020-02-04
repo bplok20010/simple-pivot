@@ -1,13 +1,41 @@
 # simplePivot
 
-数据透视(原横向倒置)
+数据透视
 
 > 不进行数据的汇总计算
 
-## 安装
+## Install
 
 ```
 npm install --save simplepivot
+```
+
+## Usage
+
+```ts
+declare function simplePivot(
+	data: PData,
+	options?: PivotOptions
+): {
+	columns: string[];
+	list: any[][];
+};
+```
+
+## types
+
+```ts
+interface PData {
+	columns: Array<string>;
+	list: any[][];
+	[x: string]: any;
+}
+
+interface PivotOptions {
+	columns: Array<string>;
+	values: string[];
+	delimiter?: string;
+}
 ```
 
 ## Options
@@ -16,33 +44,28 @@ npm install --save simplepivot
 
 透视列
 
-注: 可以使用`valueMacro`的值作为透视表的数值項, `默认会自动添加`
+```javascript
+import { simplePivot, E_VALUE } from "simplepivot";
 
-eg: `["道具名称", "E_VALUE", "道具类型"]`
+simplePivot(data, {
+    ...
+	columns: ["道具名称", E_VALUE, "道具类型"],
+});
+```
 
 ### values
 
 透视值
 
-### rows
-
-自动生成, 不用传
-
 ### delimiter
 
 默认: `_` 表头分隔符
 
-### valueMacro
-
-默认: `E_VALUE` 透视表中的 `数值` 占位符
-
 ## 使用
-
-`simplePivot(dataset, options)`
 
 ```
 
-const simplePivot = require('simplepivot');
+import { simplePivot, E_VALUE } from "simplepivot";
 
 const dataset = {
     columns: ['性别', '人数'],

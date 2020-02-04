@@ -1,1 +1,0 @@
-module.exports = require('./lib/simplePivot').default;
