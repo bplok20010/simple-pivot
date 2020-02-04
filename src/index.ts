@@ -4,7 +4,7 @@ import difference from "lodash/difference";
 import pick from "lodash/pick";
 import zipObject from "lodash/zipObject";
 
-export const E_VALUE = "E_VALUE";
+export const E_VALUE = "%E_VALUE%";
 
 function pickName<T extends {}, E extends keyof T>(data: T, keys: E[], delimiter = "_") {
 	return keys.map(key => data[key] + "").join(delimiter);
@@ -48,7 +48,6 @@ simplePivot.E_VALUE = E_VALUE;
  * @param {array<string>} options.rows - 数据透视行配置，此参数在simplePivot里无效
  * @param {array<string>} options.columns - 数据透视列配置
  * @param {array<string>} options.values - 数据透视值配置
- * @param {array<string>} options.valueMacro - 数据透视表中的数值占位符
  * @param {string} [options.delimiter='_'] - 多级表头分隔符
  */
 export function simplePivot(

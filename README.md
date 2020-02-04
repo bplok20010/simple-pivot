@@ -53,6 +53,8 @@ simplePivot(data, {
 });
 ```
 
+> 注：常量`E_VALUE`的值为`%E_VALUE%`，data.columns 中避免出现`%E_VALUE%`，否则将出现不可预测问题。
+
 ### values
 
 透视值
